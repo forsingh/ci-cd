@@ -6,7 +6,7 @@ MAINTAINER team.moloko@axway.com
 
 ENV TZ Europe/Dublin
 
-RUN wget xxxxx /APIGateway_Install.run
+RUN wget  https://s3-us-west-2.amazonaws.com/axwaygwlatestmaster/APIGateway_Install.run
 
 RUN chmod u+x APIGateway_Install.run
 
