@@ -1,0 +1,842 @@
+Deleted: sha256:f40ec4143d1b5ebe32e0209a6316ae69c242602eee5d0599799fc480dfc406e7
+Deleted: sha256:5ace89fba4614e58cc858f151acb5b8450ebb2aca4f9b2d5a62b639ab1fa84fa
+Deleted: sha256:b49507fb781cd1ed039aa87af3f9a0bc5d4c5fd37e0bc07e78619c1f988aae5d
+Error response from daemon: Error parsing reference: "REPOSITORY" is not a valid repository/tag
+Error response from daemon: Error parsing reference: "TAG" is not a valid repository/tag
+Error response from daemon: Error parsing reference: "IMAGE" is not a valid repository/tag
+Error response from daemon: Error parsing reference: "ID" is not a valid repository/tag
+Error response from daemon: Error parsing reference: "CREATED" is not a valid repository/tag
+Error response from daemon: Error parsing reference: "SIZE" is not a valid repository/tag
+Error response from daemon: Error parsing reference: "<none>" is not a valid repository/tag
+Error response from daemon: Error parsing reference: "<none>" is not a valid repository/tag
+Error response from daemon: No such image: 11:latest
+Error response from daemon: No such image: minutes:latest
+Error response from daemon: No such image: ago:latest
+Error response from daemon: No such image: 781.8:latest
+Error response from daemon: Error parsing reference: "MB" is not a valid repository/tag
+Error response from daemon: No such image: latest:latest
+Error response from daemon: No such image: 51905ee72a13:latest
+Error response from daemon: No such image: 11:latest
+Error response from daemon: No such image: minutes:latest
+Error response from daemon: No such image: ago:latest
+Error response from daemon: No such image: 781.8:latest
+Error response from daemon: Error parsing reference: "MB" is not a valid repository/tag
+Error response from daemon: No such image: latest:latest
+Error response from daemon: No such image: f40ec4143d1b:latest
+Error response from daemon: No such image: 12:latest
+Error response from daemon: No such image: minutes:latest
+Error response from daemon: No such image: ago:latest
+Error response from daemon: No such image: 515.4:latest
+Error response from daemon: Error parsing reference: "MB" is not a valid repository/tag
+Error response from daemon: No such image: centos:latest
+Error response from daemon: No such image: 7:latest
+Error response from daemon: conflict: unable to delete 0584b3d2cf6d (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 5d6da51bc48f (cannot be forced) - image has dependent child images
+Error response from daemon: No such image: weeks:latest
+Error response from daemon: No such image: ago:latest
+Error response from daemon: No such image: 196.5:latest
+Error response from daemon: Error parsing reference: "MB" is not a valid repository/tag
+root@ip-10-0-1-252:~# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+<none>              <none>              ff208b17cd68        16 minutes ago      363.7 MB
+centos              7                   0584b3d2cf6d        5 weeks ago         196.5 MB
+root@ip-10-0-1-252:~# docker rmi -f ff208b17cd68  0584b3d2cf6d
+Deleted: sha256:ff208b17cd68ae3a659ca649c9fb01e8115df1b02b48cde14454baa08dec3aa5
+Deleted: sha256:af893577e8bf6861ea0fc107a00dfd0394bd3a2b26ea9eb48b8343062be913e7
+Deleted: sha256:5d6da51bc48f43cdd14f8e94b86081c236027c3bbf5f8eed5571fcb6e7e8a41f
+Deleted: sha256:bae8ab56f1fd7d12b64cc979f4ab786ceacd25a62260b84254942e913e657139
+Untagged: centos:7
+Untagged: centos@sha256:b2f9d1c0ff5f87a4743104d099a3d561002ac500db1b9bfa02a783a46e0d366c
+Deleted: sha256:0584b3d2cf6d235ee310cf14b54667d889887b838d3f3d3033acd70fc3c48b8a
+root@ip-10-0-1-252:~# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+root@ip-10-0-1-252:~# clear
+
+root@ip-10-0-1-252:~# docker pull harishaws/centos
+Using default tag: latest
+latest: Pulling from harishaws/centos
+
+08d48e6f1cff: Already exists 
+Digest: sha256:b2f9d1c0ff5f87a4743104d099a3d561002ac500db1b9bfa02a783a46e0d366c
+Status: Downloaded newer image for harishaws/centos:latest
+root@ip-10-0-1-252:~# docker pull harishaws/java8
+Using default tag: latest
+latest: Pulling from harishaws/java8
+
+08d48e6f1cff: Already exists 
+d9bde1a17279: Already exists 
+73b237a2852a: Already exists 
+d8a9a8c4fb9c: Pull complete 
+41eaf0c0883d: Pull complete 
+Digest: sha256:df9902e533833ff33096025dd28e840521ca37be3f228a9434f71db7a35ebc59
+Status: Downloaded newer image for harishaws/java8:latest
+root@ip-10-0-1-252:~# docker pull harishaws/gwlinux
+Using default tag: latest
+latest: Pulling from harishaws/gwlinux
+
+08d48e6f1cff: Already exists 
+d9bde1a17279: Already exists 
+73b237a2852a: Already exists 
+Digest: sha256:6754d225780fbd4c409aaf55eccb47bc91c74085bf9db643fb2e9344a934b594
+Status: Downloaded newer image for harishaws/gwlinux:latest
+root@ip-10-0-1-252:~# docker pull harishaws/cassandra
+Using default tag: latest
+latest: Pulling from harishaws/cassandra
+
+08d48e6f1cff: Already exists 
+d9bde1a17279: Already exists 
+73b237a2852a: Already exists 
+d8a9a8c4fb9c: Already exists 
+41eaf0c0883d: Already exists 
+ad0271d1ee6e: Pull complete 
+66d45e72a9f2: Pull complete 
+6d3da5b85cb4: Pull complete 
+2b60476493cd: Pull complete 
+Digest: sha256:962cfa891568bd3f44634e4b7071eba9db276a11e694cbed41ab9971e848cb1a
+Status: Downloaded newer image for harishaws/cassandra:latest
+root@ip-10-0-1-252:~# docker pull harishaws/gwlinux_master
+Using default tag: latest
+Pulling repository docker.io/harishaws/gwlinux_master
+Error: image harishaws/gwlinux_master:latest not found
+root@ip-10-0-1-252:~# docker pull harishaws/gwlatest_master
+Using default tag: latest
+latest: Pulling from harishaws/gwlatest_master
+
+08d48e6f1cff: Already exists 
+d9bde1a17279: Already exists 
+73b237a2852a: Already exists 
+b65404419f93: Already exists 
+e7f5dcba81a0: Already exists 
+9c90aa8ee21a: Already exists 
+9e7cc775a465: Already exists 
+0a510a68b1f4: Already exists 
+61c3583f6d40: Already exists 
+6e96848477a1: Already exists 
+Digest: sha256:3c982794469f38212ad0409ff4b5ff378be78002d437911d8d4520512c6081ae
+Status: Downloaded newer image for harishaws/gwlatest_master:latest
+root@ip-10-0-1-252:~# docker images
+REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
+harishaws/gwlatest_master   latest              0eaa7c1baa63        4 weeks ago         3.257 GB
+harishaws/cassandra         latest              6f2b9e89ee07        4 weeks ago         922.4 MB
+harishaws/java8             latest              0f74aa243cf2        4 weeks ago         780 MB
+harishaws/gwlinux           latest              dbe777f12235        4 weeks ago         513.6 MB
+harishaws/centos            latest              0584b3d2cf6d        5 weeks ago         196.5 MB
+root@ip-10-0-1-252:~# ./compose.py --config sample-compose-config/gwlatest-1node-apimgr.json 
+['/root', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', './src/core/src']
+Using Base API Gateway Docker image name: gwlatest_master
+Loading: sample-compose-config/gwlatest-1node-apimgr.json
+Loading: /root/src/compose/src/../tmpl/gwlatestnode.json
+**** BuilderEngine.__init__ <core.config.BuildConfig object at 0x7fdc095ca850>
+__init__ recevied config: <core.config.BuildConfig object at 0x7fdc095ca850>
+Loading: sample-compose-config/gwlatest-1node-apimgr.json
+Loading: /root/src/compose/src/../tmpl/gwlatestnode.json
+
+===============================================================================
+docker rmi -f gwlatest-1node-apimgr_node1
+===============================================================================
+
+Error response from daemon: No such image: gwlatest-1node-apimgr_node1:latest
+
+===============================================================================
+docker inspect -f {{json .ContainerConfig.Labels.config}} gwlatest-1node-apimgr_node1
+===============================================================================
+
+gwlatest-1node-apimgr_node1 is out of date.
+Rebuilding topology.
+
+===============================================================================
+docker rmi -f gwlatest-1node-apimgr_node1
+===============================================================================
+
+Error response from daemon: No such image: gwlatest-1node-apimgr_node1:latest
+Generating docker compose for build /root/src/compose/src/servers/build/build_gwlatest-1node-apimgr/docker-compose.yml
+Writing frag: 
+    node1:
+        image: gwlatest_master
+        hostname: node1
+        labels:
+            - config=a9eaf14b2f3df33940f3ab3b5b525d184a358c1b
+        command: tail -f /dev/null
+        volumes:
+            - /root/src/compose/src/scripts:/scripts
+        privileged: true
+
+
+===============================================================================
+[/root/src/compose/src/servers/build/build_gwlatest-1node-apimgr] docker-compose up -d
+===============================================================================
+
+('running:', ['docker-compose', 'up'], ['-d'])
+WARNING: The Docker Engine you're using is running in swarm mode.
+
+Compose does not use swarm mode to deploy services to multiple nodes in a swarm. All containers will be scheduled on the current node.
+
+To deploy your application across the swarm, use the bundle feature of the Docker experimental build.
+
+More info:
+https://docs.docker.com/compose/bundles
+
+Creating network "buildgwlatest1nodeapimgr_default" with the default driver
+Pulling node1 (gwlatest_master:latest)...
+Pulling repository docker.io/library/gwlatest_master
+ERROR: Error: image library/gwlatest_master:latest not found
+
+===============================================================================
+[/root/src/compose/src/servers/build/build_gwlatest-1node-apimgr] docker-compose stop
+===============================================================================
+
+('running:', ['docker-compose', 'stop'], [])
+
+===============================================================================
+[/root/src/compose/src/servers/build/build_gwlatest-1node-apimgr] docker-compose rm -vf
+===============================================================================
+
+('running:', ['docker-compose', 'rm'], ['-vf'])
+Going to remove root_node1.1.084gvfe7ys026fnin12znnks2
+Removing root_node1.1.084gvfe7ys026fnin12znnks2 ... done
+Traceback (most recent call last):
+  File "./compose.py", line 13, in <module>
+    main()
+  File "/root/src/compose/src/compose.py", line 98, in main
+    builder.build()    
+  File "/root/src/compose/src/build/engine.py", line 118, in build
+    self.environment.up()
+  File "/root/src/compose/src/build/environment.py", line 30, in up
+    dockerComposeUp(self.buildProjectFolder)
+  File "./src/core/src/core/dockercompose.py", line 20, in dockerComposeUp
+    dockerCompose("up", projectFolder = projectFolder, args=args)
+  File "./src/core/src/core/dockercompose.py", line 44, in dockerCompose
+    raise Exception("Command failed. Exit status %d" % proc.returncode)
+Exception: Command failed. Exit status 1
+root@ip-10-0-1-252:~# docker images
+REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
+harishaws/gwlatest_master   latest              0eaa7c1baa63        4 weeks ago         3.257 GB
+harishaws/cassandra         latest              6f2b9e89ee07        4 weeks ago         922.4 MB
+harishaws/java8             latest              0f74aa243cf2        4 weeks ago         780 MB
+harishaws/gwlinux           latest              dbe777f12235        4 weeks ago         513.6 MB
+harishaws/centos            latest              0584b3d2cf6d        5 weeks ago         196.5 MB
+root@ip-10-0-1-252:~# docker tag harishaws/gwlatest_master gwlatest_master
+root@ip-10-0-1-252:~# ./compose.py --config sample-compose-config/gwlatest-1node-apimgr.json 
+['/root', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', './src/core/src']
+Using Base API Gateway Docker image name: gwlatest_master
+Loading: sample-compose-config/gwlatest-1node-apimgr.json
+Loading: /root/src/compose/src/../tmpl/gwlatestnode.json
+**** BuilderEngine.__init__ <core.config.BuildConfig object at 0x7fc30c1a0850>
+__init__ recevied config: <core.config.BuildConfig object at 0x7fc30c1a0850>
+Loading: sample-compose-config/gwlatest-1node-apimgr.json
+Loading: /root/src/compose/src/../tmpl/gwlatestnode.json
+
+===============================================================================
+[/root/src/compose/src/servers/build/build_gwlatest-1node-apimgr] docker-compose stop
+===============================================================================
+
+('running:', ['docker-compose', 'stop'], [])
+
+===============================================================================
+[/root/src/compose/src/servers/build/build_gwlatest-1node-apimgr] docker-compose rm -vf
+===============================================================================
+
+('running:', ['docker-compose', 'rm'], ['-vf'])
+No stopped containers
+
+===============================================================================
+docker rmi -f gwlatest-1node-apimgr_node1
+===============================================================================
+
+Error response from daemon: No such image: gwlatest-1node-apimgr_node1:latest
+
+===============================================================================
+docker inspect -f {{json .ContainerConfig.Labels.config}} gwlatest-1node-apimgr_node1
+===============================================================================
+
+gwlatest-1node-apimgr_node1 is out of date.
+Rebuilding topology.
+
+===============================================================================
+[/root/src/compose/src/servers/build/build_gwlatest-1node-apimgr] docker-compose stop
+===============================================================================
+
+('running:', ['docker-compose', 'stop'], [])
+
+===============================================================================
+[/root/src/compose/src/servers/build/build_gwlatest-1node-apimgr] docker-compose rm -vf
+===============================================================================
+
+('running:', ['docker-compose', 'rm'], ['-vf'])
+No stopped containers
+
+===============================================================================
+docker rmi -f gwlatest-1node-apimgr_node1
+===============================================================================
+
+Error response from daemon: No such image: gwlatest-1node-apimgr_node1:latest
+Generating docker compose for build /root/src/compose/src/servers/build/build_gwlatest-1node-apimgr/docker-compose.yml
+Writing frag: 
+    node1:
+        image: gwlatest_master
+        hostname: node1
+        labels:
+            - config=a9eaf14b2f3df33940f3ab3b5b525d184a358c1b
+        command: tail -f /dev/null
+        volumes:
+            - /root/src/compose/src/scripts:/scripts
+        privileged: true
+
+
+===============================================================================
+[/root/src/compose/src/servers/build/build_gwlatest-1node-apimgr] docker-compose up -d
+===============================================================================
+
+('running:', ['docker-compose', 'up'], ['-d'])
+WARNING: The Docker Engine you're using is running in swarm mode.
+
+Compose does not use swarm mode to deploy services to multiple nodes in a swarm. All containers will be scheduled on the current node.
+
+To deploy your application across the swarm, use the bundle feature of the Docker experimental build.
+
+More info:
+https://docs.docker.com/compose/bundles
+
+Creating buildgwlatest1nodeapimgr_node1_1
+Processing initial container on node1
+Processing container: node1
+Processing initial cassandraConfig on node1
+Configuring Cassandra
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/configure_cassandraports.py --cassandraDir /opt/cassandra --seed_host node1 --cassandraRpcPort 9160
+===============================================================================
+
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/configure_cassandrajvmheap.xml --cassandraDir /opt/cassandra
+===============================================================================
+
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/manage_cassandra.py --cassandraDir /opt/cassandra --cassandraRpcPort 9160 --start
+===============================================================================
+
+cat: /etc/ld.so.conf.d/*.conf: No such file or directory
+Java HotSpot(TM) 64-Bit Server VM warning: Cannot open file /opt/cassandra/bin/../logs/gc.log due to No such file or directory
+
+CompilerOracle: inline org/apache/cassandra/db/AbstractNativeCell.compareTo (Lorg/apache/cassandra/db/composites/Composite;)I
+CompilerOracle: inline org/apache/cassandra/db/composites/AbstractSimpleCellNameType.compareUnsigned (Lorg/apache/cassandra/db/composites/Composite;Lorg/apache/cassandra/db/composites/Composite;)I
+CompilerOracle: inline org/apache/cassandra/io/util/Memory.checkBounds (JJ)V
+CompilerOracle: inline org/apache/cassandra/io/util/SafeMemory.checkBounds (JJ)V
+CompilerOracle: inline org/apache/cassandra/utils/AsymmetricOrdering.selectBoundary (Lorg/apache/cassandra/utils/AsymmetricOrdering/Op;II)I
+CompilerOracle: inline org/apache/cassandra/utils/AsymmetricOrdering.strictnessOfLessThan (Lorg/apache/cassandra/utils/AsymmetricOrdering/Op;)I
+CompilerOracle: inline org/apache/cassandra/utils/ByteBufferUtil.compare (Ljava/nio/ByteBuffer;[B)I
+CompilerOracle: inline org/apache/cassandra/utils/ByteBufferUtil.compare ([BLjava/nio/ByteBuffer;)I
+CompilerOracle: inline org/apache/cassandra/utils/ByteBufferUtil.compareUnsigned (Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)I
+CompilerOracle: inline org/apache/cassandra/utils/FastByteOperations$UnsafeOperations.compareTo (Ljava/lang/Object;JILjava/lang/Object;JI)I
+CompilerOracle: inline org/apache/cassandra/utils/FastByteOperations$UnsafeOperations.compareTo (Ljava/lang/Object;JILjava/nio/ByteBuffer;)I
+CompilerOracle: inline org/apache/cassandra/utils/FastByteOperations$UnsafeOperations.compareTo (Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)I
+INFO  23:19:09 Loading settings from file:/opt/cassandra/conf/cassandra.yaml
+INFO  23:19:09 Node configuration:[authenticator=AllowAllAuthenticator; authorizer=AllowAllAuthorizer; auto_snapshot=true; batch_size_fail_threshold_in_kb=50; batch_size_warn_threshold_in_kb=5; batchlog_replay_throttle_in_kb=1024; cas_contention_timeout_in_ms=1000; client_encryption_options=<REDACTED>; cluster_name=Test Cluster; column_index_size_in_kb=64; commit_failure_policy=stop; commitlog_segment_size_in_mb=32; commitlog_sync=periodic; commitlog_sync_period_in_ms=10000; compaction_large_partition_warning_threshold_mb=100; compaction_throughput_mb_per_sec=16; concurrent_counter_writes=32; concurrent_reads=32; concurrent_writes=32; counter_cache_save_period=7200; counter_cache_size_in_mb=null; counter_write_request_timeout_in_ms=5000; cross_node_timeout=false; disk_failure_policy=stop; dynamic_snitch_badness_threshold=0.1; dynamic_snitch_reset_interval_in_ms=600000; dynamic_snitch_update_interval_in_ms=100; enable_user_defined_functions=false; endpoint_snitch=SimpleSnitch; hinted_handoff_enabled=true; hinted_handoff_throttle_in_kb=1024; incremental_backups=false; index_summary_capacity_in_mb=null; index_summary_resize_interval_in_minutes=60; inter_dc_tcp_nodelay=false; internode_compression=all; key_cache_save_period=14400; key_cache_size_in_mb=null; listen_address=node1; max_hint_window_in_ms=10800000; max_hints_delivery_threads=2; memtable_allocation_type=heap_buffers; native_transport_port=9042; num_tokens=256; partitioner=org.apache.cassandra.dht.Murmur3Partitioner; permissions_validity_in_ms=2000; range_request_timeout_in_ms=10000; read_request_timeout_in_ms=5000; request_scheduler=org.apache.cassandra.scheduler.NoScheduler; request_timeout_in_ms=10000; role_manager=CassandraRoleManager; roles_validity_in_ms=2000; row_cache_save_period=0; row_cache_size_in_mb=0; rpc_address=node1; rpc_keepalive=true; rpc_port=9160; rpc_server_type=sync; seed_provider=[{class_name=org.apache.cassandra.locator.SimpleSeedProvider, parameters=[{seeds=node1}]}]; server_encryption_options=<REDACTED>; snapshot_before_compaction=false; ssl_storage_port=7001; sstable_preemptive_open_interval_in_mb=50; start_native_transport=true; start_rpc=true; storage_port=7000; thrift_framed_transport_size_in_mb=15; tombstone_failure_threshold=100000; tombstone_warn_threshold=1000; tracetype_query_ttl=86400; tracetype_repair_ttl=604800; trickle_fsync=false; trickle_fsync_interval_in_kb=10240; truncate_request_timeout_in_ms=60000; windows_timer_interval=1; write_request_timeout_in_ms=2000]
+INFO  23:19:09 DiskAccessMode 'auto' determined to be mmap, indexAccessMode is mmap
+INFO  23:19:09 Global memtable on-heap threshold is enabled at 251MB
+INFO  23:19:09 Global memtable off-heap threshold is enabled at 251MB
+INFO  23:19:09 Loading settings from file:/opt/cassandra/conf/cassandra.yaml
+INFO  23:19:09 Node configuration:[authenticator=AllowAllAuthenticator; authorizer=AllowAllAuthorizer; auto_snapshot=true; batch_size_fail_threshold_in_kb=50; batch_size_warn_threshold_in_kb=5; batchlog_replay_throttle_in_kb=1024; cas_contention_timeout_in_ms=1000; client_encryption_options=<REDACTED>; cluster_name=Test Cluster; column_index_size_in_kb=64; commit_failure_policy=stop; commitlog_segment_size_in_mb=32; commitlog_sync=periodic; commitlog_sync_period_in_ms=10000; compaction_large_partition_warning_threshold_mb=100; compaction_throughput_mb_per_sec=16; concurrent_counter_writes=32; concurrent_reads=32; concurrent_writes=32; counter_cache_save_period=7200; counter_cache_size_in_mb=null; counter_write_request_timeout_in_ms=5000; cross_node_timeout=false; disk_failure_policy=stop; dynamic_snitch_badness_threshold=0.1; dynamic_snitch_reset_interval_in_ms=600000; dynamic_snitch_update_interval_in_ms=100; enable_user_defined_functions=false; endpoint_snitch=SimpleSnitch; hinted_handoff_enabled=true; hinted_handoff_throttle_in_kb=1024; incremental_backups=false; index_summary_capacity_in_mb=null; index_summary_resize_interval_in_minutes=60; inter_dc_tcp_nodelay=false; internode_compression=all; key_cache_save_period=14400; key_cache_size_in_mb=null; listen_address=node1; max_hint_window_in_ms=10800000; max_hints_delivery_threads=2; memtable_allocation_type=heap_buffers; native_transport_port=9042; num_tokens=256; partitioner=org.apache.cassandra.dht.Murmur3Partitioner; permissions_validity_in_ms=2000; range_request_timeout_in_ms=10000; read_request_timeout_in_ms=5000; request_scheduler=org.apache.cassandra.scheduler.NoScheduler; request_timeout_in_ms=10000; role_manager=CassandraRoleManager; roles_validity_in_ms=2000; row_cache_save_period=0; row_cache_size_in_mb=0; rpc_address=node1; rpc_keepalive=true; rpc_port=9160; rpc_server_type=sync; seed_provider=[{class_name=org.apache.cassandra.locator.SimpleSeedProvider, parameters=[{seeds=node1}]}]; server_encryption_options=<REDACTED>; snapshot_before_compaction=false; ssl_storage_port=7001; sstable_preemptive_open_interval_in_mb=50; start_native_transport=true; start_rpc=true; storage_port=7000; thrift_framed_transport_size_in_mb=15; tombstone_failure_threshold=100000; tombstone_warn_threshold=1000; tracetype_query_ttl=86400; tracetype_repair_ttl=604800; trickle_fsync=false; trickle_fsync_interval_in_kb=10240; truncate_request_timeout_in_ms=60000; windows_timer_interval=1; write_request_timeout_in_ms=2000]
+INFO  23:19:09 Hostname: node1
+INFO  23:19:09 JVM vendor/version: Java HotSpot(TM) 64-Bit Server VM/1.8.0_102
+INFO  23:19:09 Heap size: 1052770304/1052770304
+INFO  23:19:09 Code Cache Non-heap memory: init = 2555904(2496K) used = 3414656(3334K) committed = 3473408(3392K) max = 251658240(245760K)
+INFO  23:19:09 Metaspace Non-heap memory: init = 0(0K) used = 12591528(12296K) committed = 12976128(12672K) max = -1(-1K)
+INFO  23:19:09 Compressed Class Space Non-heap memory: init = 0(0K) used = 1581632(1544K) committed = 1703936(1664K) max = 1073741824(1048576K)
+INFO  23:19:09 Par Eden Space Heap memory: init = 167772160(163840K) used = 57048880(55711K) committed = 167772160(163840K) max = 167772160(163840K)
+INFO  23:19:09 Par Survivor Space Heap memory: init = 20971520(20480K) used = 0(0K) committed = 20971520(20480K) max = 20971520(20480K)
+INFO  23:19:09 CMS Old Gen Heap memory: init = 864026624(843776K) used = 0(0K) committed = 864026624(843776K) max = 864026624(843776K)
+INFO  23:19:09 Classpath: /opt/cassandra/bin/../conf:/opt/cassandra/bin/../build/classes/main:/opt/cassandra/bin/../build/classes/thrift:/opt/cassandra/bin/../lib/ST4-4.0.8.jar:/opt/cassandra/bin/../lib/airline-0.6.jar:/opt/cassandra/bin/../lib/antlr-runtime-3.5.2.jar:/opt/cassandra/bin/../lib/apache-cassandra-2.2.5.jar:/opt/cassandra/bin/../lib/apache-cassandra-clientutil-2.2.5.jar:/opt/cassandra/bin/../lib/apache-cassandra-thrift-2.2.5.jar:/opt/cassandra/bin/../lib/cassandra-driver-core-2.2.0-rc2-SNAPSHOT-20150617-shaded.jar:/opt/cassandra/bin/../lib/commons-cli-1.1.jar:/opt/cassandra/bin/../lib/commons-codec-1.2.jar:/opt/cassandra/bin/../lib/commons-lang3-3.1.jar:/opt/cassandra/bin/../lib/commons-math3-3.2.jar:/opt/cassandra/bin/../lib/compress-lzf-0.8.4.jar:/opt/cassandra/bin/../lib/concurrentlinkedhashmap-lru-1.4.jar:/opt/cassandra/bin/../lib/crc32ex-0.1.1.jar:/opt/cassandra/bin/../lib/disruptor-3.0.1.jar:/opt/cassandra/bin/../lib/ecj-4.4.2.jar:/opt/cassandra/bin/../lib/guava-16.0.jar:/opt/cassandra/bin/../lib/high-scale-lib-1.0.6.jar:/opt/cassandra/bin/../lib/jackson-core-asl-1.9.2.jar:/opt/cassandra/bin/../lib/jackson-mapper-asl-1.9.2.jar:/opt/cassandra/bin/../lib/jamm-0.3.0.jar:/opt/cassandra/bin/../lib/javax.inject.jar:/opt/cassandra/bin/../lib/jbcrypt-0.3m.jar:/opt/cassandra/bin/../lib/jcl-over-slf4j-1.7.7.jar:/opt/cassandra/bin/../lib/jna-4.0.0.jar:/opt/cassandra/bin/../lib/joda-time-2.4.jar:/opt/cassandra/bin/../lib/json-simple-1.1.jar:/opt/cassandra/bin/../lib/libthrift-0.9.2.jar:/opt/cassandra/bin/../lib/log4j-over-slf4j-1.7.7.jar:/opt/cassandra/bin/../lib/logback-classic-1.1.3.jar:/opt/cassandra/bin/../lib/logback-core-1.1.3.jar:/opt/cassandra/bin/../lib/lz4-1.3.0.jar:/opt/cassandra/bin/../lib/metrics-core-3.1.0.jar:/opt/cassandra/bin/../lib/metrics-logback-3.1.0.jar:/opt/cassandra/bin/../lib/netty-all-4.0.23.Final.jar:/opt/cassandra/bin/../lib/ohc-core-0.3.4.jar:/opt/cassandra/bin/../lib/ohc-core-j8-0.3.4.jar:/opt/cassandra/bin/../lib/reporter-config-base-3.0.0.jar:/opt/cassandra/bin/../lib/reporter-config3-3.0.0.jar:/opt/cassandra/bin/../lib/sigar-1.6.4.jar:/opt/cassandra/bin/../lib/slf4j-api-1.7.7.jar:/opt/cassandra/bin/../lib/snakeyaml-1.11.jar:/opt/cassandra/bin/../lib/snappy-java-1.1.1.7.jar:/opt/cassandra/bin/../lib/stream-2.5.2.jar:/opt/cassandra/bin/../lib/super-csv-2.1.0.jar:/opt/cassandra/bin/../lib/thrift-server-0.3.7.jar:/opt/cassandra/bin/../lib/jsr223/*/*.jar:/opt/cassandra/bin/../lib/jamm-0.3.0.jar
+INFO  23:19:09 JVM Arguments: [-ea, -javaagent:/opt/cassandra/bin/../lib/jamm-0.3.0.jar, -XX:+CMSClassUnloadingEnabled, -XX:+UseThreadPriorities, -XX:ThreadPriorityPolicy=42, -Xms1G, -Xmx1G, -Xmn200M, -XX:+HeapDumpOnOutOfMemoryError, -Xss256k, -XX:StringTableSize=1000003, -XX:+UseParNewGC, -XX:+UseConcMarkSweepGC, -XX:+CMSParallelRemarkEnabled, -XX:SurvivorRatio=8, -XX:MaxTenuringThreshold=1, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+UseTLAB, -XX:+PerfDisableSharedMem, -XX:CompileCommandFile=/opt/cassandra/bin/../conf/hotspot_compiler, -XX:CMSWaitDuration=10000, -XX:+CMSParallelInitialMarkEnabled, -XX:+CMSEdenChunksRecordAlways, -XX:CMSWaitDuration=10000, -XX:+UseCondCardMark, -XX:+PrintGCDetails, -XX:+PrintGCDateStamps, -XX:+PrintHeapAtGC, -XX:+PrintTenuringDistribution, -XX:+PrintGCApplicationStoppedTime, -XX:+PrintPromotionFailure, -Xloggc:/opt/cassandra/bin/../logs/gc.log, -XX:+UseGCLogFileRotation, -XX:NumberOfGCLogFiles=10, -XX:GCLogFileSize=10M, -Djava.net.preferIPv4Stack=true, -Dcassandra.jmx.local.port=7199, -XX:+DisableExplicitGC, -Djava.library.path=/opt/cassandra/bin/../lib/sigar-bin, -Dlogback.configurationFile=logback.xml, -Dcassandra.logdir=/opt/cassandra/bin/../logs, -Dcassandra.storagedir=/opt/cassandra/bin/../data, -Dcassandra-pidfile=/opt/cassandra/bin/pidfile]
+INFO  23:19:09 JNA mlockall successful
+WARN  23:19:09 jemalloc shared library could not be preloaded to speed up memory allocations
+WARN  23:19:09 JMX is not enabled to receive remote connections. Please see cassandra-env.sh for more info.
+INFO  23:19:09 Initializing SIGAR library
+INFO  23:19:09 Checked OS settings and found them configured for optimal performance.
+WARN  23:19:09 Directory /opt/cassandra/bin/../data/data doesn't exist
+WARN  23:19:09 Directory /opt/cassandra/bin/../data/commitlog doesn't exist
+WARN  23:19:09 Directory /opt/cassandra/bin/../data/saved_caches doesn't exist
+INFO  23:19:10 Initializing system.sstable_activity
+INFO  23:19:10 Initializing system.hints
+INFO  23:19:10 Initializing system.compaction_history
+INFO  23:19:10 Initializing system.peers
+INFO  23:19:10 Initializing system.schema_columnfamilies
+INFO  23:19:10 Initializing system.schema_functions
+INFO  23:19:10 Initializing system.IndexInfo
+INFO  23:19:10 Initializing system.schema_columns
+INFO  23:19:10 Initializing system.schema_triggers
+INFO  23:19:10 Initializing system.local
+INFO  23:19:10 Initializing system.schema_usertypes
+INFO  23:19:10 Initializing system.batchlog
+INFO  23:19:10 Initializing system.available_ranges
+INFO  23:19:10 Initializing system.schema_aggregates
+INFO  23:19:10 Initializing system.paxos
+INFO  23:19:10 Initializing system.peer_events
+INFO  23:19:10 Initializing system.size_estimates
+INFO  23:19:10 Initializing system.compactions_in_progress
+INFO  23:19:10 Initializing system.schema_keyspaces
+INFO  23:19:10 Initializing system.range_xfers
+INFO  23:19:11 Initializing key cache with capacity of 50 MBs.
+INFO  23:19:11 Initializing row cache with capacity of 0 MBs
+INFO  23:19:11 Initializing counter cache with capacity of 25 MBs
+INFO  23:19:11 Scheduling counter cache save to every 7200 seconds (going to save all keys).
+INFO  23:19:11 No commitlog files found; skipping replay
+INFO  23:19:11 Cassandra version: 2.2.5
+INFO  23:19:11 Thrift API version: 20.1.0
+INFO  23:19:11 CQL supported versions: 3.3.1 (default: 3.3.1)
+INFO  23:19:11 Initializing index summary manager with a memory pool size of 50 MB and a resize interval of 60 minutes
+INFO  23:19:11 Loading persisted ring state
+INFO  23:19:11 Loading settings from file:/opt/cassandra/conf/cassandra.yaml
+INFO  23:19:11 Node configuration:[authenticator=AllowAllAuthenticator; authorizer=AllowAllAuthorizer; auto_snapshot=true; batch_size_fail_threshold_in_kb=50; batch_size_warn_threshold_in_kb=5; batchlog_replay_throttle_in_kb=1024; cas_contention_timeout_in_ms=1000; client_encryption_options=<REDACTED>; cluster_name=Test Cluster; column_index_size_in_kb=64; commit_failure_policy=stop; commitlog_segment_size_in_mb=32; commitlog_sync=periodic; commitlog_sync_period_in_ms=10000; compaction_large_partition_warning_threshold_mb=100; compaction_throughput_mb_per_sec=16; concurrent_counter_writes=32; concurrent_reads=32; concurrent_writes=32; counter_cache_save_period=7200; counter_cache_size_in_mb=null; counter_write_request_timeout_in_ms=5000; cross_node_timeout=false; disk_failure_policy=stop; dynamic_snitch_badness_threshold=0.1; dynamic_snitch_reset_interval_in_ms=600000; dynamic_snitch_update_interval_in_ms=100; enable_user_defined_functions=false; endpoint_snitch=SimpleSnitch; hinted_handoff_enabled=true; hinted_handoff_throttle_in_kb=1024; incremental_backups=false; index_summary_capacity_in_mb=null; index_summary_resize_interval_in_minutes=60; inter_dc_tcp_nodelay=false; internode_compression=all; key_cache_save_period=14400; key_cache_size_in_mb=null; listen_address=node1; max_hint_window_in_ms=10800000; max_hints_delivery_threads=2; memtable_allocation_type=heap_buffers; native_transport_port=9042; num_tokens=256; partitioner=org.apache.cassandra.dht.Murmur3Partitioner; permissions_validity_in_ms=2000; range_request_timeout_in_ms=10000; read_request_timeout_in_ms=5000; request_scheduler=org.apache.cassandra.scheduler.NoScheduler; request_timeout_in_ms=10000; role_manager=CassandraRoleManager; roles_validity_in_ms=2000; row_cache_save_period=0; row_cache_size_in_mb=0; rpc_address=node1; rpc_keepalive=true; rpc_port=9160; rpc_server_type=sync; seed_provider=[{class_name=org.apache.cassandra.locator.SimpleSeedProvider, parameters=[{seeds=node1}]}]; server_encryption_options=<REDACTED>; snapshot_before_compaction=false; ssl_storage_port=7001; sstable_preemptive_open_interval_in_mb=50; start_native_transport=true; start_rpc=true; storage_port=7000; thrift_framed_transport_size_in_mb=15; tombstone_failure_threshold=100000; tombstone_warn_threshold=1000; tracetype_query_ttl=86400; tracetype_repair_ttl=604800; trickle_fsync=false; trickle_fsync_interval_in_kb=10240; truncate_request_timeout_in_ms=60000; windows_timer_interval=1; write_request_timeout_in_ms=2000]
+WARN  23:19:11 No host ID found, created dd6e01ad-ac81-423c-8ad8-b0a3fcf97a4f (Note: This should happen exactly once per node).
+INFO  23:19:11 Starting up server gossip
+INFO  23:19:11 Loading settings from file:/opt/cassandra/conf/cassandra.yaml
+INFO  23:19:11 Node configuration:[authenticator=AllowAllAuthenticator; authorizer=AllowAllAuthorizer; auto_snapshot=true; batch_size_fail_threshold_in_kb=50; batch_size_warn_threshold_in_kb=5; batchlog_replay_throttle_in_kb=1024; cas_contention_timeout_in_ms=1000; client_encryption_options=<REDACTED>; cluster_name=Test Cluster; column_index_size_in_kb=64; commit_failure_policy=stop; commitlog_segment_size_in_mb=32; commitlog_sync=periodic; commitlog_sync_period_in_ms=10000; compaction_large_partition_warning_threshold_mb=100; compaction_throughput_mb_per_sec=16; concurrent_counter_writes=32; concurrent_reads=32; concurrent_writes=32; counter_cache_save_period=7200; counter_cache_size_in_mb=null; counter_write_request_timeout_in_ms=5000; cross_node_timeout=false; disk_failure_policy=stop; dynamic_snitch_badness_threshold=0.1; dynamic_snitch_reset_interval_in_ms=600000; dynamic_snitch_update_interval_in_ms=100; enable_user_defined_functions=false; endpoint_snitch=SimpleSnitch; hinted_handoff_enabled=true; hinted_handoff_throttle_in_kb=1024; incremental_backups=false; index_summary_capacity_in_mb=null; index_summary_resize_interval_in_minutes=60; inter_dc_tcp_nodelay=false; internode_compression=all; key_cache_save_period=14400; key_cache_size_in_mb=null; listen_address=node1; max_hint_window_in_ms=10800000; max_hints_delivery_threads=2; memtable_allocation_type=heap_buffers; native_transport_port=9042; num_tokens=256; partitioner=org.apache.cassandra.dht.Murmur3Partitioner; permissions_validity_in_ms=2000; range_request_timeout_in_ms=10000; read_request_timeout_in_ms=5000; request_scheduler=org.apache.cassandra.scheduler.NoScheduler; request_timeout_in_ms=10000; role_manager=CassandraRoleManager; roles_validity_in_ms=2000; row_cache_save_period=0; row_cache_size_in_mb=0; rpc_address=node1; rpc_keepalive=true; rpc_port=9160; rpc_server_type=sync; seed_provider=[{class_name=org.apache.cassandra.locator.SimpleSeedProvider, parameters=[{seeds=node1}]}]; server_encryption_options=<REDACTED>; snapshot_before_compaction=false; ssl_storage_port=7001; sstable_preemptive_open_interval_in_mb=50; start_native_transport=true; start_rpc=true; storage_port=7000; thrift_framed_transport_size_in_mb=15; tombstone_failure_threshold=100000; tombstone_warn_threshold=1000; tracetype_query_ttl=86400; tracetype_repair_ttl=604800; trickle_fsync=false; trickle_fsync_interval_in_kb=10240; truncate_request_timeout_in_ms=60000; windows_timer_interval=1; write_request_timeout_in_ms=2000]
+INFO  23:19:11 Starting Messaging Service on node1/172.19.0.2:7000 (eth0)
+INFO  23:19:11 Loading settings from file:/opt/cassandra/conf/cassandra.yaml
+INFO  23:19:11 Node configuration:[authenticator=AllowAllAuthenticator; authorizer=AllowAllAuthorizer; auto_snapshot=true; batch_size_fail_threshold_in_kb=50; batch_size_warn_threshold_in_kb=5; batchlog_replay_throttle_in_kb=1024; cas_contention_timeout_in_ms=1000; client_encryption_options=<REDACTED>; cluster_name=Test Cluster; column_index_size_in_kb=64; commit_failure_policy=stop; commitlog_segment_size_in_mb=32; commitlog_sync=periodic; commitlog_sync_period_in_ms=10000; compaction_large_partition_warning_threshold_mb=100; compaction_throughput_mb_per_sec=16; concurrent_counter_writes=32; concurrent_reads=32; concurrent_writes=32; counter_cache_save_period=7200; counter_cache_size_in_mb=null; counter_write_request_timeout_in_ms=5000; cross_node_timeout=false; disk_failure_policy=stop; dynamic_snitch_badness_threshold=0.1; dynamic_snitch_reset_interval_in_ms=600000; dynamic_snitch_update_interval_in_ms=100; enable_user_defined_functions=false; endpoint_snitch=SimpleSnitch; hinted_handoff_enabled=true; hinted_handoff_throttle_in_kb=1024; incremental_backups=false; index_summary_capacity_in_mb=null; index_summary_resize_interval_in_minutes=60; inter_dc_tcp_nodelay=false; internode_compression=all; key_cache_save_period=14400; key_cache_size_in_mb=null; listen_address=node1; max_hint_window_in_ms=10800000; max_hints_delivery_threads=2; memtable_allocation_type=heap_buffers; native_transport_port=9042; num_tokens=256; partitioner=org.apache.cassandra.dht.Murmur3Partitioner; permissions_validity_in_ms=2000; range_request_timeout_in_ms=10000; read_request_timeout_in_ms=5000; request_scheduler=org.apache.cassandra.scheduler.NoScheduler; request_timeout_in_ms=10000; role_manager=CassandraRoleManager; roles_validity_in_ms=2000; row_cache_save_period=0; row_cache_size_in_mb=0; rpc_address=node1; rpc_keepalive=true; rpc_port=9160; rpc_server_type=sync; seed_provider=[{class_name=org.apache.cassandra.locator.SimpleSeedProvider, parameters=[{seeds=node1}]}]; server_encryption_options=<REDACTED>; snapshot_before_compaction=false; ssl_storage_port=7001; sstable_preemptive_open_interval_in_mb=50; start_native_transport=true; start_rpc=true; storage_port=7000; thrift_framed_transport_size_in_mb=15; tombstone_failure_threshold=100000; tombstone_warn_threshold=1000; tracetype_query_ttl=86400; tracetype_repair_ttl=604800; trickle_fsync=false; trickle_fsync_interval_in_kb=10240; truncate_request_timeout_in_ms=60000; windows_timer_interval=1; write_request_timeout_in_ms=2000]
+INFO  23:19:11 Loading settings from file:/opt/cassandra/conf/cassandra.yaml
+INFO  23:19:11 Node configuration:[authenticator=AllowAllAuthenticator; authorizer=AllowAllAuthorizer; auto_snapshot=true; batch_size_fail_threshold_in_kb=50; batch_size_warn_threshold_in_kb=5; batchlog_replay_throttle_in_kb=1024; cas_contention_timeout_in_ms=1000; client_encryption_options=<REDACTED>; cluster_name=Test Cluster; column_index_size_in_kb=64; commit_failure_policy=stop; commitlog_segment_size_in_mb=32; commitlog_sync=periodic; commitlog_sync_period_in_ms=10000; compaction_large_partition_warning_threshold_mb=100; compaction_throughput_mb_per_sec=16; concurrent_counter_writes=32; concurrent_reads=32; concurrent_writes=32; counter_cache_save_period=7200; counter_cache_size_in_mb=null; counter_write_request_timeout_in_ms=5000; cross_node_timeout=false; disk_failure_policy=stop; dynamic_snitch_badness_threshold=0.1; dynamic_snitch_reset_interval_in_ms=600000; dynamic_snitch_update_interval_in_ms=100; enable_user_defined_functions=false; endpoint_snitch=SimpleSnitch; hinted_handoff_enabled=true; hinted_handoff_throttle_in_kb=1024; incremental_backups=false; index_summary_capacity_in_mb=null; index_summary_resize_interval_in_minutes=60; inter_dc_tcp_nodelay=false; internode_compression=all; key_cache_save_period=14400; key_cache_size_in_mb=null; listen_address=node1; max_hint_window_in_ms=10800000; max_hints_delivery_threads=2; memtable_allocation_type=heap_buffers; native_transport_port=9042; num_tokens=256; partitioner=org.apache.cassandra.dht.Murmur3Partitioner; permissions_validity_in_ms=2000; range_request_timeout_in_ms=10000; read_request_timeout_in_ms=5000; request_scheduler=org.apache.cassandra.scheduler.NoScheduler; request_timeout_in_ms=10000; role_manager=CassandraRoleManager; roles_validity_in_ms=2000; row_cache_save_period=0; row_cache_size_in_mb=0; rpc_address=node1; rpc_keepalive=true; rpc_port=9160; rpc_server_type=sync; seed_provider=[{class_name=org.apache.cassandra.locator.SimpleSeedProvider, parameters=[{seeds=node1}]}]; server_encryption_options=<REDACTED>; snapshot_before_compaction=false; ssl_storage_port=7001; sstable_preemptive_open_interval_in_mb=50; start_native_transport=true; start_rpc=true; storage_port=7000; thrift_framed_transport_size_in_mb=15; tombstone_failure_threshold=100000; tombstone_warn_threshold=1000; tracetype_query_ttl=86400; tracetype_repair_ttl=604800; trickle_fsync=false; trickle_fsync_interval_in_kb=10240; truncate_request_timeout_in_ms=60000; windows_timer_interval=1; write_request_timeout_in_ms=2000]
+INFO  23:19:11 This node will not auto bootstrap because it is configured to be a seed node.
+INFO  23:19:11 Loading settings from file:/opt/cassandra/conf/cassandra.yaml
+INFO  23:19:11 Node configuration:[authenticator=AllowAllAuthenticator; authorizer=AllowAllAuthorizer; auto_snapshot=true; batch_size_fail_threshold_in_kb=50; batch_size_warn_threshold_in_kb=5; batchlog_replay_throttle_in_kb=1024; cas_contention_timeout_in_ms=1000; client_encryption_options=<REDACTED>; cluster_name=Test Cluster; column_index_size_in_kb=64; commit_failure_policy=stop; commitlog_segment_size_in_mb=32; commitlog_sync=periodic; commitlog_sync_period_in_ms=10000; compaction_large_partition_warning_threshold_mb=100; compaction_throughput_mb_per_sec=16; concurrent_counter_writes=32; concurrent_reads=32; concurrent_writes=32; counter_cache_save_period=7200; counter_cache_size_in_mb=null; counter_write_request_timeout_in_ms=5000; cross_node_timeout=false; disk_failure_policy=stop; dynamic_snitch_badness_threshold=0.1; dynamic_snitch_reset_interval_in_ms=600000; dynamic_snitch_update_interval_in_ms=100; enable_user_defined_functions=false; endpoint_snitch=SimpleSnitch; hinted_handoff_enabled=true; hinted_handoff_throttle_in_kb=1024; incremental_backups=false; index_summary_capacity_in_mb=null; index_summary_resize_interval_in_minutes=60; inter_dc_tcp_nodelay=false; internode_compression=all; key_cache_save_period=14400; key_cache_size_in_mb=null; listen_address=node1; max_hint_window_in_ms=10800000; max_hints_delivery_threads=2; memtable_allocation_type=heap_buffers; native_transport_port=9042; num_tokens=256; partitioner=org.apache.cassandra.dht.Murmur3Partitioner; permissions_validity_in_ms=2000; range_request_timeout_in_ms=10000; read_request_timeout_in_ms=5000; request_scheduler=org.apache.cassandra.scheduler.NoScheduler; request_timeout_in_ms=10000; role_manager=CassandraRoleManager; roles_validity_in_ms=2000; row_cache_save_period=0; row_cache_size_in_mb=0; rpc_address=node1; rpc_keepalive=true; rpc_port=9160; rpc_server_type=sync; seed_provider=[{class_name=org.apache.cassandra.locator.SimpleSeedProvider, parameters=[{seeds=node1}]}]; server_encryption_options=<REDACTED>; snapshot_before_compaction=false; ssl_storage_port=7001; sstable_preemptive_open_interval_in_mb=50; start_native_transport=true; start_rpc=true; storage_port=7000; thrift_framed_transport_size_in_mb=15; tombstone_failure_threshold=100000; tombstone_warn_threshold=1000; tracetype_query_ttl=86400; tracetype_repair_ttl=604800; trickle_fsync=false; trickle_fsync_interval_in_kb=10240; truncate_request_timeout_in_ms=60000; windows_timer_interval=1; write_request_timeout_in_ms=2000]
+INFO  23:19:11 Generated random tokens. tokens are [2881090613360982088, -3426020957797546738, 4002331337183979246, -532283981514452446, 2054125843791533872, 415555439444959276, -7490277905774772039, 6694954546427976813, -4718874436442895335, 7693660780508850167, -7598995407645833188, 2759760461277906558, -5507943814963217508, 9026283994178885374, -9143815615468268673, 7431442203016490448, -7246476769264937887, -2234205501060757245, 5978836043373509830, -670702689363253890, 4294048696140626062, -4391810683232164494, -2551563669816984020, 6393277325415476916, 2533657623239000764, -6264020244003664452, 8120955645736748654, 2301102345212155793, -2882497252698336458, -7561736614371236629, -9109757290438791456, 896605246652938118, 7005207335086636605, -8830619716548729874, -6538422555164403669, 4696544274642522309, 2217026735473220603, 3325491270712856149, 489465310942534665, -7363878003085115726, -6058157712356661832, -3645674624588083759, -1060418028700663924, 2533515284629212293, 1113002421746970764, -6548624474278958881, 394150026751346380, -7794947724293877919, 4313762677759146732, -4322578347989083167, -3796782446821720406, -8295913034854879108, 506602121185239325, 4165404462223065670, 6576895803897670356, 4761518530718138226, -1601003351546906985, 1207690116044009707, -5467199325631903213, -5257527501629622925, 47733226272406059, 4897854815951815337, -2350134760329307212, 5013114991559542902, 1164243782315569971, -1888484744463393250, 5416906597479151807, 5119002913950639940, -1351299094770034190, 446418388833234946, -1889393128169777196, -4235249431997047295, 5816014219377168059, 5164228456597243196, 3750860320710877953, 2290206384957508223, -4321140685950120816, 2453123193189122645, -2640362792645019651, 8410513027307753577, 2823252511653335279, 5835376973397879798, 6843770175184454308, 3312814062336335346, -6200873539587949387, -6189159254418113322, -8698039141353175124, 3576834507526439033, 1801158467993767602, 3247917388764211983, -8873733478815550027, 1901546750195923290, -5001699193549357549, -89050926982166887, -569426581584571432, -112967434894733433, 2012150492668817221, -5222155738148284449, -7002856645618320771, 3049519287575964390, 7412861331966734621, 1375196879777284809, -7299366486611360626, 8344619342902572435, -7040372060838733958, -665273835411665640, 2330103388159024916, -6792363228312394284, -7675367642012079316, 7029100703856990534, -8621582171021920704, -7888921221883181766, -324450233170952933, -1425161722733525273, -2582156460516585229, 5800284776783409322, 146135290754333461, -2602549978942164645, -8515446481591210653, -8966688198027227872, 1512170540540576641, -3589777508901656684, -7836298231933196286, 1572938353968491976, 241839641334211125, 404745659766375858, 1744498315564418906, -6002305523622723665, -2742842456452229093, 4724430480641375157, 5645904647483047430, 6021889425423904510, -3780454462072966823, 4951742740388331131, 6000564921499111896, 9121871318415089346, -1022887360607645152, 7695587800490305920, -4274121360337130289, 308605714538097838, -1510232055674981131, 1943722428842563516, 5086497401542566461, -1450667142260159148, 7126403715791413357, 3997917931687936537, -7772315425034990138, -9119689444782330557, -8217464647168167780, 6983305473139981340, -1750598432213015284, 4782638966508214805, -5430217085374083904, -9051497483517564872, -1180807018475601514, 5587158984513326144, 8563832906780440881, -4491026522298733511, 3454068098356642044, -8120917084693255539, 187995182091708226, 2303638494416291632, 7284772187607093770, -3244697283766115880, 4682038408113782481, 7619613787571472233, 1073822387043091430, 2616467886366900139, 2570766145492430439, 1704139610886351246, 7690490966730590584, 1528886546066114174, 6259939025930574038, 8619563202083422437, -4089252735507952879, 1683781248311461646, -4195124773785014595, 6792007733507786080, 2557538367642543425, 5755632602604396091, 9033948829706670873, 6899882897556813564, 8358630099601322179, 3298060348685581810, 3451504454925823232, 676332500288887578, 1071022699276953602, 814148895881545577, 8206574197450153649, -3899400983299071931, -1782280780192869449, 6575185063237367562, 6248456806415469396, -3909246590600421398, 7289139280457489189, 7456491560183687192, 1650431069185329722, 1823404887247701955, 250738489043340636, -580261912868601248, -9194525353569971157, 2251260464580357107, 5831926462066377465, -339056560103841985, 3523098082805777920, -7035561518848179074, 501024769167224795, 2199063034058577663, 5480096410970870780, -8918715252572880493, -8776245158578073307, 4604129015526968894, -3587624034396742336, -1803767944148964852, -2318381653577262877, 476356524177927327, -4482325455301181485, -1660710751012683217, -8213586176151319260, 2212376835861812944, -6621264613295534102, -3065179354225013285, -657482686478238247, 29198143080095284, 5116783541615973330, -6618945620214617960, -2422858025593693795, 6516192171851342477, 514738150307911694, 7745438713567022714, -7690327530963150894, 2353343372670621881, -2480169745363488151, 2380776828137281463, 4565841480115001039, -2714705445909335417, 2341895734683232347, 4363533542521318532, -4789052254189225907, -8722014254621968819, -3249203943347388684, -2825246019774667616, 1771486498464646534, -2802245607999401662, -1167802635129122621, 8695694697354791453, -8872228889665630618, 1472629760163051865, 7264002797952226381, -8636010754341958958, -6760737659517580309, -9105715711759956669, -6573005528286492493, -4186600011915912579, 7412960482883297046, -6925711365448535135]
+INFO  23:19:11 Create new Keyspace: KSMetaData{name=system_traces, strategyClass=SimpleStrategy, strategyOptions={replication_factor=2}, cfMetaData={sessions=org.apache.cassandra.config.CFMetaData@67855dd0[cfId=c5e99f16-8677-3914-b17e-960613512345,ksName=system_traces,cfName=sessions,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.ColumnToCollectionType(706172616d6574657273:org.apache.cassandra.db.marshal.MapType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.UTF8Type))),comment=tracing sessions,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=0,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.UUIDType,minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=client, type=org.apache.cassandra.db.marshal.InetAddressType, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=command, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=session_id, type=org.apache.cassandra.db.marshal.UUIDType, kind=PARTITION_KEY, componentIndex=null, indexName=null, indexType=null}, ColumnDefinition{name=coordinator, type=org.apache.cassandra.db.marshal.InetAddressType, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=request, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=started_at, type=org.apache.cassandra.db.marshal.TimestampType, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=duration, type=org.apache.cassandra.db.marshal.Int32Type, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=parameters, type=org.apache.cassandra.db.marshal.MapType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.UTF8Type), kind=REGULAR, componentIndex=0, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false], events=org.apache.cassandra.config.CFMetaData@3849a9b6[cfId=8826e8e9-e16a-3728-8753-3bc1fc713c25,ksName=system_traces,cfName=events,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.TimeUUIDType,org.apache.cassandra.db.marshal.UTF8Type),comment=tracing events,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=0,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.UUIDType,minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=activity, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=thread, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=session_id, type=org.apache.cassandra.db.marshal.UUIDType, kind=PARTITION_KEY, componentIndex=null, indexName=null, indexType=null}, ColumnDefinition{name=event_id, type=org.apache.cassandra.db.marshal.TimeUUIDType, kind=CLUSTERING_COLUMN, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=source, type=org.apache.cassandra.db.marshal.InetAddressType, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=source_elapsed, type=org.apache.cassandra.db.marshal.Int32Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false]}, durableWrites=true, userTypes=org.apache.cassandra.config.UTMetaData@5e62bb1c}
+INFO  23:19:11 Loading org.apache.cassandra.config.CFMetaData@7ad0603f[cfId=c5e99f16-8677-3914-b17e-960613512345,ksName=system_traces,cfName=sessions,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.ColumnToCollectionType(706172616d6574657273:org.apache.cassandra.db.marshal.MapType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.UTF8Type))),comment=tracing sessions,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=0,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.UUIDType,minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=client, type=org.apache.cassandra.db.marshal.InetAddressType, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=command, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=session_id, type=org.apache.cassandra.db.marshal.UUIDType, kind=PARTITION_KEY, componentIndex=null, indexName=null, indexType=null}, ColumnDefinition{name=coordinator, type=org.apache.cassandra.db.marshal.InetAddressType, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=request, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=started_at, type=org.apache.cassandra.db.marshal.TimestampType, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=duration, type=org.apache.cassandra.db.marshal.Int32Type, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=parameters, type=org.apache.cassandra.db.marshal.MapType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.UTF8Type), kind=REGULAR, componentIndex=0, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false]
+INFO  23:19:11 Initializing system_traces.sessions
+INFO  23:19:11 Loading org.apache.cassandra.config.CFMetaData@2c8f1b50[cfId=8826e8e9-e16a-3728-8753-3bc1fc713c25,ksName=system_traces,cfName=events,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.TimeUUIDType,org.apache.cassandra.db.marshal.UTF8Type),comment=tracing events,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=0,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.UUIDType,minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=activity, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=session_id, type=org.apache.cassandra.db.marshal.UUIDType, kind=PARTITION_KEY, componentIndex=null, indexName=null, indexType=null}, ColumnDefinition{name=thread, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=event_id, type=org.apache.cassandra.db.marshal.TimeUUIDType, kind=CLUSTERING_COLUMN, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=source, type=org.apache.cassandra.db.marshal.InetAddressType, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=source_elapsed, type=org.apache.cassandra.db.marshal.Int32Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false]
+INFO  23:19:11 Initializing system_traces.events
+INFO  23:19:11 Create new Keyspace: KSMetaData{name=system_distributed, strategyClass=SimpleStrategy, strategyOptions={replication_factor=3}, cfMetaData={parent_repair_history=org.apache.cassandra.config.CFMetaData@3080600a[cfId=deabd734-b99d-3b9c-92e5-fd92eb5abf14,ksName=system_distributed,cfName=parent_repair_history,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.ColumnToCollectionType(7265717565737465645f72616e676573:org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type),7375636365737366756c5f72616e676573:org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type),636f6c756d6e66616d696c795f6e616d6573:org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type))),comment=Repair history,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=0,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.TimeUUIDType,minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=requested_ranges, type=org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type), kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=exception_message, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=keyspace_name, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=successful_ranges, type=org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type), kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=started_at, type=org.apache.cassandra.db.marshal.TimestampType, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=finished_at, type=org.apache.cassandra.db.marshal.TimestampType, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=exception_stacktrace, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=columnfamily_names, type=org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type), kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=parent_id, type=org.apache.cassandra.db.marshal.TimeUUIDType, kind=PARTITION_KEY, componentIndex=null, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false], repair_history=org.apache.cassandra.config.CFMetaData@73c03b23[cfId=759fffad-624b-3181-80ee-fa9a52d1f627,ksName=system_distributed,cfName=repair_history,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.TimeUUIDType,org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.ColumnToCollectionType(7061727469636970616e7473:org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.InetAddressType))),comment=Repair history,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=0,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.UTF8Type),minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=status, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=id, type=org.apache.cassandra.db.marshal.TimeUUIDType, kind=CLUSTERING_COLUMN, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=coordinator, type=org.apache.cassandra.db.marshal.InetAddressType, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=finished_at, type=org.apache.cassandra.db.marshal.TimestampType, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=participants, type=org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.InetAddressType), kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=exception_stacktrace, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=parent_id, type=org.apache.cassandra.db.marshal.TimeUUIDType, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=range_end, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=range_begin, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=exception_message, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=keyspace_name, type=org.apache.cassandra.db.marshal.UTF8Type, kind=PARTITION_KEY, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=started_at, type=org.apache.cassandra.db.marshal.TimestampType, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=columnfamily_name, type=org.apache.cassandra.db.marshal.UTF8Type, kind=PARTITION_KEY, componentIndex=1, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false]}, durableWrites=true, userTypes=org.apache.cassandra.config.UTMetaData@6a3705be}
+INFO  23:19:11 Loading org.apache.cassandra.config.CFMetaData@1c46ca1f[cfId=deabd734-b99d-3b9c-92e5-fd92eb5abf14,ksName=system_distributed,cfName=parent_repair_history,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.ColumnToCollectionType(7265717565737465645f72616e676573:org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type),7375636365737366756c5f72616e676573:org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type),636f6c756d6e66616d696c795f6e616d6573:org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type))),comment=Repair history,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=0,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.TimeUUIDType,minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=requested_ranges, type=org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type), kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=exception_message, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=keyspace_name, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=successful_ranges, type=org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type), kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=started_at, type=org.apache.cassandra.db.marshal.TimestampType, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=finished_at, type=org.apache.cassandra.db.marshal.TimestampType, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=exception_stacktrace, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=columnfamily_names, type=org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type), kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=parent_id, type=org.apache.cassandra.db.marshal.TimeUUIDType, kind=PARTITION_KEY, componentIndex=null, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false]
+INFO  23:19:11 Initializing system_distributed.parent_repair_history
+INFO  23:19:11 Loading org.apache.cassandra.config.CFMetaData@2773e872[cfId=759fffad-624b-3181-80ee-fa9a52d1f627,ksName=system_distributed,cfName=repair_history,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.TimeUUIDType,org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.ColumnToCollectionType(7061727469636970616e7473:org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.InetAddressType))),comment=Repair history,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=0,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.UTF8Type),minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=status, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=id, type=org.apache.cassandra.db.marshal.TimeUUIDType, kind=CLUSTERING_COLUMN, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=coordinator, type=org.apache.cassandra.db.marshal.InetAddressType, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=finished_at, type=org.apache.cassandra.db.marshal.TimestampType, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=participants, type=org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.InetAddressType), kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=exception_stacktrace, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=parent_id, type=org.apache.cassandra.db.marshal.TimeUUIDType, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=range_end, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=range_begin, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=exception_message, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=keyspace_name, type=org.apache.cassandra.db.marshal.UTF8Type, kind=PARTITION_KEY, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=started_at, type=org.apache.cassandra.db.marshal.TimestampType, kind=REGULAR, componentIndex=1, indexName=null, indexType=null}, ColumnDefinition{name=columnfamily_name, type=org.apache.cassandra.db.marshal.UTF8Type, kind=PARTITION_KEY, componentIndex=1, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false]
+INFO  23:19:11 Initializing system_distributed.repair_history
+INFO  23:19:11 Node node1/172.19.0.2 state jump to NORMAL
+INFO  23:19:11 Create new Keyspace: KSMetaData{name=system_auth, strategyClass=SimpleStrategy, strategyOptions={replication_factor=1}, cfMetaData={role_permissions=org.apache.cassandra.config.CFMetaData@5aee3fdf[cfId=3afbe79f-2194-31a7-add7-f5ab90d8ec9c,ksName=system_auth,cfName=role_permissions,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.ColumnToCollectionType(7065726d697373696f6e73:org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type))),comment=permissions granted to db roles,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=7776000,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.UTF8Type,minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=resource, type=org.apache.cassandra.db.marshal.UTF8Type, kind=CLUSTERING_COLUMN, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=role, type=org.apache.cassandra.db.marshal.UTF8Type, kind=PARTITION_KEY, componentIndex=null, indexName=null, indexType=null}, ColumnDefinition{name=permissions, type=org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type), kind=REGULAR, componentIndex=1, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false], roles=org.apache.cassandra.config.CFMetaData@1e948ca3[cfId=5bc52802-de25-35ed-aeab-188eecebb090,ksName=system_auth,cfName=roles,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.ColumnToCollectionType(6d656d6265725f6f66:org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type))),comment=role definitions,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=7776000,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.UTF8Type,minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=role, type=org.apache.cassandra.db.marshal.UTF8Type, kind=PARTITION_KEY, componentIndex=null, indexName=null, indexType=null}, ColumnDefinition{name=member_of, type=org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type), kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=salted_hash, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=can_login, type=org.apache.cassandra.db.marshal.BooleanType, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=is_superuser, type=org.apache.cassandra.db.marshal.BooleanType, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false], resource_role_permissons_index=org.apache.cassandra.config.CFMetaData@284fac32[cfId=5f2fbdad-91f1-3946-bd25-d5da3a5c35ec,ksName=system_auth,cfName=resource_role_permissons_index,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.UTF8Type),comment=index of db roles with permissions granted on a resource,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=7776000,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.UTF8Type,minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=resource, type=org.apache.cassandra.db.marshal.UTF8Type, kind=PARTITION_KEY, componentIndex=null, indexName=null, indexType=null}, ColumnDefinition{name=role, type=org.apache.cassandra.db.marshal.UTF8Type, kind=CLUSTERING_COLUMN, componentIndex=0, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false], role_members=org.apache.cassandra.config.CFMetaData@58b82196[cfId=0ecdaa87-f8fb-3e60-88d1-74fb36fe5c0d,ksName=system_auth,cfName=role_members,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.UTF8Type),comment=role memberships lookup table,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=7776000,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.UTF8Type,minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=role, type=org.apache.cassandra.db.marshal.UTF8Type, kind=PARTITION_KEY, componentIndex=null, indexName=null, indexType=null}, ColumnDefinition{name=member, type=org.apache.cassandra.db.marshal.UTF8Type, kind=CLUSTERING_COLUMN, componentIndex=0, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false]}, durableWrites=true, userTypes=org.apache.cassandra.config.UTMetaData@5d41ca1a}
+INFO  23:19:11 Loading org.apache.cassandra.config.CFMetaData@6526d6a3[cfId=3afbe79f-2194-31a7-add7-f5ab90d8ec9c,ksName=system_auth,cfName=role_permissions,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.ColumnToCollectionType(7065726d697373696f6e73:org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type))),comment=permissions granted to db roles,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=7776000,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.UTF8Type,minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=resource, type=org.apache.cassandra.db.marshal.UTF8Type, kind=CLUSTERING_COLUMN, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=role, type=org.apache.cassandra.db.marshal.UTF8Type, kind=PARTITION_KEY, componentIndex=null, indexName=null, indexType=null}, ColumnDefinition{name=permissions, type=org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type), kind=REGULAR, componentIndex=1, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false]
+INFO  23:19:11 Initializing system_auth.role_permissions
+INFO  23:19:11 Loading org.apache.cassandra.config.CFMetaData@7d879b60[cfId=5f2fbdad-91f1-3946-bd25-d5da3a5c35ec,ksName=system_auth,cfName=resource_role_permissons_index,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.UTF8Type),comment=index of db roles with permissions granted on a resource,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=7776000,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.UTF8Type,minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=resource, type=org.apache.cassandra.db.marshal.UTF8Type, kind=PARTITION_KEY, componentIndex=null, indexName=null, indexType=null}, ColumnDefinition{name=role, type=org.apache.cassandra.db.marshal.UTF8Type, kind=CLUSTERING_COLUMN, componentIndex=0, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false]
+INFO  23:19:11 Initializing system_auth.resource_role_permissons_index
+INFO  23:19:11 Loading org.apache.cassandra.config.CFMetaData@4b441482[cfId=5bc52802-de25-35ed-aeab-188eecebb090,ksName=system_auth,cfName=roles,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.ColumnToCollectionType(6d656d6265725f6f66:org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type))),comment=role definitions,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=7776000,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.UTF8Type,minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=role, type=org.apache.cassandra.db.marshal.UTF8Type, kind=PARTITION_KEY, componentIndex=null, indexName=null, indexType=null}, ColumnDefinition{name=member_of, type=org.apache.cassandra.db.marshal.SetType(org.apache.cassandra.db.marshal.UTF8Type), kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=salted_hash, type=org.apache.cassandra.db.marshal.UTF8Type, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=can_login, type=org.apache.cassandra.db.marshal.BooleanType, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}, ColumnDefinition{name=is_superuser, type=org.apache.cassandra.db.marshal.BooleanType, kind=REGULAR, componentIndex=0, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false]
+INFO  23:19:11 Initializing system_auth.roles
+INFO  23:19:11 Loading org.apache.cassandra.config.CFMetaData@2f44bb54[cfId=0ecdaa87-f8fb-3e60-88d1-74fb36fe5c0d,ksName=system_auth,cfName=role_members,cfType=Standard,comparator=org.apache.cassandra.db.marshal.CompositeType(org.apache.cassandra.db.marshal.UTF8Type,org.apache.cassandra.db.marshal.UTF8Type),comment=role memberships lookup table,readRepairChance=0.0,dcLocalReadRepairChance=0.0,gcGraceSeconds=7776000,defaultValidator=org.apache.cassandra.db.marshal.BytesType,keyValidator=org.apache.cassandra.db.marshal.UTF8Type,minCompactionThreshold=4,maxCompactionThreshold=32,columnMetadata=[ColumnDefinition{name=role, type=org.apache.cassandra.db.marshal.UTF8Type, kind=PARTITION_KEY, componentIndex=null, indexName=null, indexType=null}, ColumnDefinition{name=member, type=org.apache.cassandra.db.marshal.UTF8Type, kind=CLUSTERING_COLUMN, componentIndex=0, indexName=null, indexType=null}],compactionStrategyClass=class org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy,compactionStrategyOptions={},compressionParameters={sstable_compression=org.apache.cassandra.io.compress.LZ4Compressor},bloomFilterFpChance=0.01,memtableFlushPeriod=3600000,caching={"keys":"ALL", "rows_per_partition":"NONE"},defaultTimeToLive=0,minIndexInterval=128,maxIndexInterval=2048,speculativeRetry=99.0PERCENTILE,droppedColumns={},triggers=[],isDense=false]
+INFO  23:19:11 Initializing system_auth.role_members
+INFO  23:19:11 Waiting for gossip to settle before accepting client requests...
+INFO  23:19:19 No gossip backlog; proceeding
+Datacenter: datacenter1
+=======================
+Status=Up/Down
+|/ State=Normal/Leaving/Joining/Moving
+--  Address     Load       Tokens       Owns    Host ID                               Rack
+UN  172.19.0.2  96.97 KB   256          ?       dd6e01ad-ac81-423c-8ad8-b0a3fcf97a4f  rack1
+
+Note: Non-system keyspaces don't have the same replication settings, effective ownership information is meaningless
+--------------------------------------------------------------------------------
+Starting Cassandra on node1
+--------------------------------------------------------------------------------
+/opt/cassandra/bin/cassandra -p /opt/cassandra/bin/pidfile
+Waiting for /opt/cassandra/bin/cassandra
+/opt/cassandra/bin/cassandra finished, exit code 0
+Wait for port to open with timeout: 600
+--------------------------------------------------------------------------------
+Going to execute nodetool status...
+--------------------------------------------------------------------------------
+/opt/cassandra/bin/nodetool status
+Waiting for /opt/cassandra/bin/nodetool
+/opt/cassandra/bin/nodetool finished, exit code 0
+Processing initial gatewayConfig on node1
+Setting up container
+Processing buildPhase1 container on node1
+Processing container: node1
+Processing buildPhase1 cassandraConfig on node1
+Processing buildPhase1 gatewayConfig on node1
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/configure_nodemanager.py --gwdir /opt/Axway/apigateway --anm_host node1 --current_version 7.5.x
+===============================================================================
+
+Generating domain private key and certificate...
+Generating private key...
+Generating CSR for key...
+Signing certificate for CSR...
+Converting PEM files to P12...
+Generating Node Manager private key and certificate...
+Generating private key...
+Generating CSR for key...
+Signing certificate for CSR...
+Converting PEM files to P12...
+New Node Manager SSL certificate details:
+   dname: CN=nodemanager-1,OU=group-1,DC=host-1 
+   expires: Sat Nov 14 23:19:28 GMT 2116 
+   thumbprint: 3A:1E:E9:46:E6:AB:77:2A:19:CD:8F:91:04:4D:38:7F:FC:20:03:4F 
+   issuer dname: CN=Domain 
+   issuer thumbprint: 8D:42:1F:51:D9:FA:35:51:6E:31:0E:BD:90:80:4D:26:C2:05:43:24
+Completed successfully.
+You may now start the Node Manager on your newly registered host.
+The system has placed your domain private key into directory '/opt/Axway/apigateway/groups/certs/private'. Please backup and protect the contents of this directory.
+service started
+--------------------------------------------------------------------------------
+Configuring Admin NodeManager on node1: /opt/Axway/apigateway
+--------------------------------------------------------------------------------
+/opt/Axway/apigateway/posix/bin/managedomain -i
+Waiting for /opt/Axway/apigateway/posix/bin/managedomain
+/opt/Axway/apigateway/posix/bin/managedomain finished, exit code 0
+/opt/Axway/apigateway/posix/bin/nodemanager -d
+Waiting for /opt/Axway/apigateway/posix/bin/nodemanager
+/opt/Axway/apigateway/posix/bin/nodemanager finished, exit code 0
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/create_instance.py --gwdir /opt/Axway/apigateway -g GatewayGroup -n GatewayInstance -m 8085 -s 8080 --current_version 7.5.x --first
+===============================================================================
+
+Requesting CSR from Admin Node Manager...
+CSR received from Admin Node Manager.
+Requesting signed certificate from Admin Node Manager...
+Signed certificate received from Admin Node Manager.
+Requesting Admin Node Manager to create new API Gateway...
+New API Gateway SSL certificate details:
+   dname: CN=instance-1,OU=group-2,DC=host-1 
+   expires: Sat Nov 14 23:19:42 GMT 2116 
+   thumbprint: 9A:54:9D:11:84:F0:04:CC:04:2F:66:3D:EB:2C:6A:C3:80:06:CB:91 
+   issuer dname: CN=Domain 
+   issuer thumbprint: 8D:42:1F:51:D9:FA:35:51:6E:31:0E:BD:90:80:4D:26:C2:05:43:24
+The new API Gateway 'GatewayInstance' in group 'GatewayGroup' has been successfully created and installed
+
+Start the new API Gateway by executing the following command:
+/opt/Axway/apigateway/posix/bin/startinstance -g "GatewayGroup" -n "GatewayInstance"
+
+You can alternatively add /opt/Axway/apigateway/posix/bin/ to your path and use "startinstance -g "GatewayGroup" -n "GatewayInstance"".
+
+You can test the connection by visiting the URL:
+http://node1:8080/healthcheck
+Completed successfully.
+--------------------------------------------------------------------------------
+Creating instance on node1: GatewayGroup:GatewayInstance
+Instance Management Port: 8085
+Instance Services Port:   8080
+--------------------------------------------------------------------------------
+/opt/Axway/apigateway/posix/bin/managedomain -c -g GatewayGroup -n GatewayInstance --username admin --password changeme -m 8085 -s 8080
+Waiting for /opt/Axway/apigateway/posix/bin/managedomain
+/opt/Axway/apigateway/posix/bin/managedomain finished, exit code 0
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/configure_envsettings.py --gwdir /opt/Axway/apigateway -g GatewayGroup -n GatewayInstance -p env.PORT.OAUTH2.SERVICES=8089
+===============================================================================
+
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/manage_gateway.py --gwdir /opt/Axway/apigateway --start -g GatewayGroup -n GatewayInstance
+===============================================================================
+
+service started
+--------------------------------------------------------------------------------
+Starting instance node1: GatewayGroup:GatewayInstance
+--------------------------------------------------------------------------------
+/opt/Axway/apigateway/posix/bin/startinstance -g GatewayGroup -n GatewayInstance -d
+Waiting for /opt/Axway/apigateway/posix/bin/startinstance
+/opt/Axway/apigateway/posix/bin/startinstance finished, exit code 0
+Wait for port to open with timeout: 600
+[Container: node1][Group: GatewayGroup] Configuring Entity Store on host: node1
+No replication required for group GatewayGroup as it is a single node group.
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/configure_entitystore.py --gwdir /opt/Axway/apigateway -g GatewayGroup -n GatewayInstance -s 8080 --cassandraHost node1
+===============================================================================
+
+-Updating Deployment Archive
+Executing Config Script: /scripts/config/cassandraSetup.py
+--Configuring Entity Store replication factor
+Setting Replication factor to: None
+Added Cassandra server details: node1:9160
+--Redeploying Updated Gateway
+--------------------------------------------------------------------------------
+Configuring EntityStore on node1: GatewayGroup:GatewayInstance
+LDAP: False
+SMTP: False
+REPL: None
+--------------------------------------------------------------------------------
+/opt/Axway/apigateway/samples/scripts/run.sh /scripts/lib/configimporter.py -g GatewayGroup -n GatewayInstance --username admin --password changeme -f /scripts/config/cassandraSetup.py repl_factor=None cassandraHosts=node1
+Waiting for /opt/Axway/apigateway/samples/scripts/run.sh
+/opt/Axway/apigateway/samples/scripts/run.sh finished, exit code 0
+Wait for port to open with timeout: 600
+Processing buildPhase2 container on node1
+Processing container: node1
+Processing buildPhase2 cassandraConfig on node1
+Processing buildPhase2 gatewayConfig on node1
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/configure_apimanager.py --gwdir /opt/Axway/apigateway -g GatewayGroup -n GatewayInstance --version 7.5.x --trafficPort 8065 --portalPort 8075
+===============================================================================
+
+Group name is: GatewayGroup
+Service name is: GatewayInstance
+Creating API Administrator account apiadmin.
+Checking password length (minimum 6 characters)
+Service EnvSettings updated
+Loading the API Manager Configuration... 
+Extracting configuration fragment from salesforce-apiconnector-7.5.2.jar.
+Extracting resource images/salesforce-dialog.jpg
+Extracting configuration fragment from servicenow-apiconnector-7.5.2.jar.
+Extracting resource images/servicenow-dialog.jpg
+Loading Connector from '/opt/Axway/apigateway/system/lib/connectors/servicenow-apiconnector-7.5.2.jar.xml' ...
+Loading Connector from '/opt/Axway/apigateway/system/lib/connectors/salesforce-apiconnector-7.5.2.jar.xml' ...
+The configuration has been updated and relevant API Manager files have been loaded.
+Configuring API Administrator
+Changing API Administrator password
+API Administrator password updated
+--------------------------------------------------------------------------------
+Configuring API Manager on node1: GatewayGroup:GatewayInstance
+Traffic Port: 8065
+Portal Port:   8075
+--------------------------------------------------------------------------------
+/opt/Axway/apigateway/posix/bin/setup-apimanager -g GatewayGroup -n GatewayInstance --trafficport 8065 --portalport 8075 --username admin --password changeme --adminPass changeme
+Waiting for /opt/Axway/apigateway/posix/bin/setup-apimanager
+/opt/Axway/apigateway/posix/bin/setup-apimanager finished, exit code 0
+Wait for port to open with timeout: 600
+Wait for port to open with timeout: 600
+Processing buildPhase3 container on node1
+Processing container: node1
+Processing buildPhase3 cassandraConfig on node1
+Processing buildPhase3 gatewayConfig on node1
+[Container: node1][Group: GatewayGroup] Configuring API Manager Entity Store settings on host: node1
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/configure_entitystore.py --gwdir /opt/Axway/apigateway -g GatewayGroup -n GatewayInstance -s 8080 --ldap --smtp
+===============================================================================
+
+-Updating Deployment Archive
+Executing Config Script: /scripts/config/smtpSetup.py
+-- Configuring Defualt Portal SMTP server
+Executing Config Script: /scripts/config/ldapSetup.py
+--Configuring Entity Store with External ApacheDS LDAP
+--Redeploying Updated Gateway
+--------------------------------------------------------------------------------
+Configuring EntityStore on node1: GatewayGroup:GatewayInstance
+LDAP: True
+SMTP: True
+REPL: None
+--------------------------------------------------------------------------------
+/opt/Axway/apigateway/samples/scripts/run.sh /scripts/lib/configimporter.py -g GatewayGroup -n GatewayInstance --username admin --password changeme -f /scripts/config/smtpSetup.py -f /scripts/config/ldapSetup.py
+Waiting for /opt/Axway/apigateway/samples/scripts/run.sh
+/opt/Axway/apigateway/samples/scripts/run.sh finished, exit code 0
+Wait for port to open with timeout: 600
+[Container: node1][Group: GatewayGroup] Configuring Cassandra Consistency on host: node1
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/configure_cassandraconsistency.py --gwdir /opt/Axway/apigateway -g GatewayGroup -n GatewayInstance -s 8080 --readConsistencyLevel QUORUM --writeConsistencyLevel QUORUM
+===============================================================================
+
+-Updating Deployment Archive
+Executing Config Script: /scripts/config/cassandraConsistencySetup.py
+--Configuring Entity Store Read/Write consistency
+--Redeploying Updated Gateway
+--------------------------------------------------------------------------------
+Configuring Cassandra Consistency Level
+Write Consistency Level: QUORUM
+Read Consistency Level: QUORUM
+--------------------------------------------------------------------------------
+/opt/Axway/apigateway/samples/scripts/run.sh /scripts/lib/configimporter.py -g GatewayGroup -n GatewayInstance --username admin --password changeme -f /scripts/config/cassandraConsistencySetup.py writeConsistencyLevel=QUORUM readConsistencyLevel=QUORUM
+Waiting for /opt/Axway/apigateway/samples/scripts/run.sh
+/opt/Axway/apigateway/samples/scripts/run.sh finished, exit code 0
+Wait for port to open with timeout: 600
+Processing final container on node1
+Processing container: node1
+Processing final cassandraConfig on node1
+Processing final gatewayConfig on node1
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/manage_gateway.py --gwdir /opt/Axway/apigateway --wait --all --nm
+===============================================================================
+
+--------------------------------------------------------------------------------
+Waiting for NodeManager on node1
+--------------------------------------------------------------------------------
+Wait for port to open with timeout: 600
+--------------------------------------------------------------------------------
+Waiting for instances on node1
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Waiting for instance node1: GatewayGroup:GatewayInstance
+--------------------------------------------------------------------------------
+Wait for port to open with timeout: 600
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/backup.py --srcdir /opt/Axway/apigateway/conf --name conf
+===============================================================================
+
+--------------------------------------------------------------------------------
+Starting Backup Start from /opt/Axway/apigateway/conf to conf 
+--------------------------------------------------------------------------------
+backup_path does not exist - creating /opt/Axway/backup
+rm -rf /opt/Axway/backup/conf
+Waiting for rm
+rm finished, exit code 0
+cp -Rf /opt/Axway/apigateway/conf /opt/Axway/backup/conf
+Waiting for cp
+cp finished, exit code 0
+--------------------------------------------------------------------------------
+Backup state for backup conf - 65b4006e1d6721858f2f1a8250acbd8b77e98227c846ba71af66b9bb
+--------------------------------------------------------------------------------
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/backup.py --srcdir /opt/Axway/apigateway/groups --name groups
+===============================================================================
+
+--------------------------------------------------------------------------------
+Starting Backup Start from /opt/Axway/apigateway/groups to groups 
+--------------------------------------------------------------------------------
+rm -rf /opt/Axway/backup/groups
+Waiting for rm
+rm finished, exit code 0
+cp -Rf /opt/Axway/apigateway/groups /opt/Axway/backup/groups
+Waiting for cp
+cp finished, exit code 0
+--------------------------------------------------------------------------------
+Backup state for backup groups - 1724c344cc05f130e0c8566cb0980c58dc7eae31f5a5a99ece6083fd
+--------------------------------------------------------------------------------
+Processing launch container on node1
+Processing launch cassandraConfig on node1
+Processing launch gatewayConfig on node1
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 mkdir -p /
+===============================================================================
+
+
+===============================================================================
+docker exec -i buildgwlatest1nodeapimgr_node1_1 tee /launch.conf
+===============================================================================
+
+/scripts/manage_gateway.py --gwdir /opt/Axway/apigateway --backoff --all
+/scripts/manage_gateway.py --gwdir /opt/Axway/apigateway --start --backupRecover --apimgr --all --nm
+/scripts/manage_gateway.py --gwdir /opt/Axway/apigateway --all --nm --wait
+tail -f /dev/nullCommit the containers in this config
+Processing initial StopAllVshell on node1
+
+===============================================================================
+docker exec buildgwlatest1nodeapimgr_node1_1 /scripts/manage_gateway.py --gwdir /opt/Axway/apigateway --stop --all --nm
+===============================================================================
+
+waiting for process 495 to finish....done
+waiting for process 324 to finish....done
+--------------------------------------------------------------------------------
+Stopping instances on node1
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Stopping instance node1: GatewayGroup:GatewayInstance
+--------------------------------------------------------------------------------
+/opt/Axway/apigateway/posix/bin/startinstance -g GatewayGroup -n GatewayInstance -k
+--------------------------------------------------------------------------------
+Stopping NodeManager on node1
+--------------------------------------------------------------------------------
+/opt/Axway/apigateway/posix/bin/nodemanager -k
+
+===============================================================================
+docker commit -p -c CMD /scripts/launch.py buildgwlatest1nodeapimgr_node1_1 gwlatest-1node-apimgr_node1
+===============================================================================
+
+sha256:e957dedf281816727d7cdd5a5f2977f0937589e2a0982b49ccde92daa7e5f8b6
+
+===============================================================================
+docker rm -vf buildgwlatest1nodeapimgr_node1_1
+===============================================================================
+
+buildgwlatest1nodeapimgr_node1_1
+
+===============================================================================
+[/root/src/compose/src/servers/build/build_gwlatest-1node-apimgr] docker-compose stop
+===============================================================================
+
+('running:', ['docker-compose', 'stop'], [])
+
+===============================================================================
+[/root/src/compose/src/servers/build/build_gwlatest-1node-apimgr] docker-compose rm -vf
+===============================================================================
+
+('running:', ['docker-compose', 'rm'], ['-vf'])
+No stopped containers
+Generating the docker-compose.yaml.
+Generating docker compose /root/src/compose/src/../../../compose-generated/servers/gwlatest-1node-apimgr/docker-compose.yml
+
+===============================================================================
+Summary
+Single node setup with API Manager.
+Config Hash: a9eaf14b2f3df33940f3ab3b5b525d184a358c1b
+
+node1 (gwlatest_master) Admin Nodemanager
+    GatewayGroup
+        GatewayInstance
+
+    Generate took    : 0:01:46.010381
+===============================================================================
+
+root@ip-10-0-1-252:~# docker images
+REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
+gwlatest-1node-apimgr_node1   latest              e957dedf2818        13 seconds ago      3.462 GB
+gwlatest_master               latest              0eaa7c1baa63        4 weeks ago         3.257 GB
+harishaws/gwlatest_master     latest              0eaa7c1baa63        4 weeks ago         3.257 GB
+harishaws/cassandra           latest              6f2b9e89ee07        4 weeks ago         922.4 MB
+harishaws/java8               latest              0f74aa243cf2        4 weeks ago         780 MB
+harishaws/gwlinux             latest              dbe777f12235        4 weeks ago         513.6 MB
+harishaws/centos              latest              0584b3d2cf6d        5 weeks ago         196.5 MB
+root@ip-10-0-1-252:~# ls
+APIGateway.run             build.py           compose.py          dockerfiles  README.md  sample-compose-config  summary.txt
+apigw_containers_info.txt  compose-generated  docker-compose.yml  license.lic  root.dab   src
+root@ip-10-0-1-252:~# vi compose-generated/servers/gwlatest-1node-apimgr/docker-compose.yml 
+
+        - MAX_HEAP_SIZE=1G
+        - HEAP_NEWSIZE=400m
+        #volumes:
+        #  Cassandra data volume
+        # -  cassandra-s1_DATA:/opt/cassandra/data
+        #  Cassandra logs volume
+        # -  cassandra-s1_LOGS:/opt/cassandra/logs
+        image: cassandra
+        hostname: cassandra-s1
+        restart: on-failure:2
+
+
+    cassandra-s2:
+        image: cassandra
+        environment:
+        - START_BACKOFF_SECS=120 # prevents race between nodes joining the cluster
+        - SEEDS=cassandra-m
+        - MAX_HEAP_SIZE=1G
+        - HEAP_NEWSIZE=400m
+        #volumes:
+        #  Cassandra data volume
+        # -  cassandra-s2_DATA:/opt/cassandra/data
+        #  Cassandra logs volume
+        # -  cassandra-s2_LOGS:/opt/cassandra/logs
+        image: cassandra
+        hostname: cassandra-s2
+        restart: on-failure:2
+
+# volumes:
+#    node1_CONF_DATA:
+#        external: true
+#    node1_TRACE_DATA:
+#        external: true
+#    node1_LOGS_DATA:
+#        external: true
+#    node1_EVENTS_DATA:
+#        external: true
+#    node1_GROUP_DATA:
+#        external: true
+#    node1_USER_DATA:
+#        external: true
+#    cassandra-m_DATA:
+#        external: true
+#    cassandra-m_LOGS:
+#        external: true
+#    cassandra-s1_DATA:
+#        external: true
+#    cassandra-s1_LOGS:
+#        external: true
+#    cassandra-s2_DATA:
+#        external: true
+#    cassandra-s2_LOGS:
+#        external: true
+                                                                                                                                                                 105,1         Bot
