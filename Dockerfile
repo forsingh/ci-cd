@@ -13,16 +13,16 @@ RUN chmod u+x APIGateway_Install.run
 #ADD lic.lic /
 
 ADD scripts /scripts
-
+RUN wget https://s3-us-west-2.amazonaws.com/axwaygwlatestmaster/multiple751.lic
 RUN cd / && \
 ./APIGateway_Install.run \
 --mode unattended \
 --unattendedmodeui none \
 --setup_type complete \
 --prefix /opt/Axway/ \
---licenseFilePath  https://s3-us-west-2.amazonaws.com/axwaygwlatestmaster/multiple751.lic \
---apimgmtLicenseFilePath  https://s3-us-west-2.amazonaws.com/axwaygwlatestmaster/multiple751.lic \
---analyticsLicenseFilePath  https://s3-us-west-2.amazonaws.com/axwaygwlatestmaster/multiple751.lic \
+--licenseFilePath  /multiple751.lic \ 
+--apimgmtLicenseFilePath  /multiple751.lic \
+--analyticsLicenseFilePath  /multiple751.lic \
 --firstInNewDomain 0 \
 --configureGatewayQuestion 0 \
 --nmStartupQuestion 0 \
