@@ -20,9 +20,9 @@ RUN cd / && \
 --unattendedmodeui none \
 --setup_type complete \
 --prefix /opt/Axway/ \
---licenseFilePath /lic.lic \
---apimgmtLicenseFilePath /lic.lic \
---analyticsLicenseFilePath /lic.lic \
+--licenseFilePath wget https://s3-us-west-2.amazonaws.com/axwaygwlatestmaster/multiple751.lic \
+--apimgmtLicenseFilePath wget https://s3-us-west-2.amazonaws.com/axwaygwlatestmaster/multiple751.lic \
+--analyticsLicenseFilePath wget https://s3-us-west-2.amazonaws.com/axwaygwlatestmaster/multiple751.lic \
 --firstInNewDomain 0 \
 --configureGatewayQuestion 0 \
 --nmStartupQuestion 0 \
