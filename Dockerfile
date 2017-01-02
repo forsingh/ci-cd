@@ -1,2 +1,3 @@
-FROM httpd
-#
+FROM scratch
+COPY hello /
+CMD ["/hello"]
