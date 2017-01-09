@@ -1,1 +1,1 @@
-FROM nginxxxx
+FROM httpd
